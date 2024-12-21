@@ -1,0 +1,141 @@
+/* Default Sidebar Styles */
+.sidebar {
+    background: #fff;
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    padding-left: 2%;
+    padding-top: 80px;
+    transition: width 0.3s ease;
+}
+
+.shortcut-links img {
+    width: 20px;
+    margin-right: 20px;
+}
+
+.side-links {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: fit-content;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.sidebar hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    width: 85%;
+}
+
+.subscribed-list h3 {
+    font-size: 13px;
+    margin: 20px 0;
+    color: #5a5a5a;
+}
+
+.subscribed-list img {
+    width: 25px;
+    border-radius: 20px;
+    margin-right: 20px;
+}
+
+/* Active Link */
+.side-links.active img {
+    padding-bottom: 2px;
+    border-bottom: 3px solid red;
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Collapse sidebar */
+    .sidebar {
+        width: 5%;
+        padding-left: 5%;
+        padding-top: 60px;
+    }
+
+    /* Hide text in small sidebar */
+    .small-sidebar p {
+        display: none;
+    }
+
+    .small-sidebar h3 {
+        display: none;
+    }
+
+    /* Adjust icon size for better visibility */
+    .sidebar .side-links img {
+        width: 25px;
+        margin-right: 10px;
+    }
+
+    /* Subscribed list adjustments */
+    .subscribed-list h3 {
+        display: none;
+    }
+
+    .subscribed-list .side-link {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .subscribed-list .side-link img {
+        width: 20px;
+        margin-right: 10px;
+    }
+}
+
+/* Tablets and Smaller Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 5%;
+        padding-left: 5%;
+    }
+
+    .sidebar .side-links img {
+        width: 25px;
+        margin-right: 8px;
+    }
+
+    .subscribed-list .side-link {
+        margin-bottom: 10px;
+    }
+
+    .subscribed-list .side-link img {
+        width: 20px;
+    }
+}
+
+/* Larger Screens (min-width: 1024px) */
+@media (max-width: 900px) {
+    .sidebar {
+        display: none;
+        width: 15%;
+        padding-left: 2%;
+        padding-top: 80px;
+    }
+
+    .sidebar .side-links img {
+        width: 20px;
+        margin-right: 20px;
+    }
+
+    .subscribed-list .side-link {
+        margin-bottom: 20px;
+    }
+
+    .subscribed-list .side-link img {
+        width: 25px;
+    }
+
+    .subscribed-list h3 {
+        font-size: 13px;
+        margin: 20px 0;
+        color: #5a5a5a;
+    }
+}

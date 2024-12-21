@@ -1,0 +1,52 @@
+.container{
+    background: #f9f9f9;
+    padding-left: 17%;
+    padding-right: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.large-container{
+    padding-left: 7%;
+}/* Default Styles */
+.container {
+    background: #f9f9f9;
+    padding-left: 17%;  /* Adjust for sidebar visibility */
+    padding-right: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: padding-left 0.3s ease;
+}
+
+/* When sidebar is collapsed (on mobile) */
+.large-container {
+    padding-left: 7%;  /* More space for Feed when sidebar is hidden */
+}
+
+/* For Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 5%;  /* Adjust for collapsed sidebar */
+    }
+
+    .large-container {
+        padding-left: 0;  /* Full width for the feed */
+    }
+}
+
+/* For Tablets (max-width: 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding-left: 0;  /* Ensure full width for Feed on very small screens */
+    }
+
+    .large-container {
+        padding-left: 0;  /* Full width for the Feed on very small screens */
+    }
+}
+
+/* For Larger Screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .container {
+        padding-left: 17%;  /* Default padding when sidebar is visible */
+    }
+}
